@@ -1,0 +1,14 @@
+*{
+    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.corpo{
+    width: 600px;
+}
+
+.email{
+    height: 500px;
+    width: 500px;
+}
