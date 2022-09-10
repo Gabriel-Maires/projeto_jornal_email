@@ -1,17 +1,6 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/css.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:wght@100;400&display=swap"
-        rel="stylesheet">
-    <title>Jornal Email</title>
-</head>
+{% extends 'base.html' %}
+
+{% block historico_edicoes %}
 <body>
     <div class="corpo">
     {% for i in emails %}
@@ -19,9 +8,8 @@
         <p class="Titulo"><b>{{i.email_title}}</b> {{i.email_text}}</p>
         <hr>
     </div>
-    <br>
     {% endfor %}
     </div>
 
 </body>
-</html>
+{% endblock historico_edicoes %}

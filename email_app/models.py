@@ -1,8 +1,6 @@
-from tkinter import CASCADE
 from django.db import models
 
 
-# Create your models here.
 class Email(models.Model):
     email_title = models.CharField(max_length=200)
     email_text = models.TextField()
@@ -12,12 +10,18 @@ class Email(models.Model):
 
 
 class Subscribers(models.Model):
-    email = models.EmailField()
+    subscriber_email = models.EmailField()
+    total_subscribers = models.IntegerField()
 
     def __str__(self):
         return self.email
 
 
-class Jornal(models.Model):
-    title = models.CharField(max_length=200)
-    users_destiny = models.ForeignKey(Subscribers, on_delete=models.DO_NOTHING)
+class DayEdition(models.Model):
+    title = models.CharField(max_length=300)
+    emails = models.ForeignKey(Email, on_delete=models.DO_NOTHING)
+    send_to = models.ForeignKey(Subscribers, on_delete=models.DO_NOTHING)
+    data = models.DateField()
+
+    def __str__(self):
+        return self.title

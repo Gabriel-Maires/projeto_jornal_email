@@ -5,10 +5,10 @@
 }
 
 .corpo{
-    width: 600px;
+    width: 645px;
+    display: block;
 }
 
 .email{
-    height: 500px;
-    width: 500px;
+    width: 645px;
 }

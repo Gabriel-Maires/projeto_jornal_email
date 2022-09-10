@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/homepage/homepage.css' %}">
+
+
+{% block table %}
+<div class="container">
+    <table class="table tabela-edicoes">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    
+        </tbody>
+    </table>
+</div>
+
+{% endblock table %}
