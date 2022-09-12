@@ -11,7 +11,6 @@ class Email(models.Model):
 
 class Subscribers(models.Model):
     subscriber_email = models.EmailField()
-    total_subscribers = models.IntegerField()
 
     def __str__(self):
         return self.email
